@@ -1,0 +1,17 @@
+segmentation: [0, 500, 750, 1000]
+empty: "§7§l|"
+fill: ["§9§l|", "§6§l|", "§c§l|"]
+scale: 10
+
+Database:
+  Method: SQLITE
+  Type:
+    SQLite:
+      table: contribution_data
+    SQL:
+      host: localhost
+      port: 3306
+      user: root
+      password: root
+      database: test
+      table: contribution_data
