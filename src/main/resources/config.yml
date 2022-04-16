@@ -5,13 +5,12 @@ scale: 10
 
 Database:
   Method: SQLITE
-  Type:
-    SQLite:
-      table: contribution_data
-    SQL:
-      host: localhost
-      port: 3306
-      user: root
-      password: root
-      database: test
-      table: contribution_data
+  SQLite:
+    table: contribution_data
+  SQL:
+    host: localhost
+    port: 3306
+    user: root
+    password: root
+    database: test
+    table: contribution_data

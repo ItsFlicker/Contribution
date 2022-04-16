@@ -6,7 +6,6 @@ import taboolib.common.platform.function.getDataFolder
 import taboolib.library.configuration.ConfigurationSection
 import taboolib.module.configuration.Configuration
 import taboolib.module.configuration.Type
-import taboolib.module.database.ColumnOptionSQLite
 import taboolib.module.database.ColumnTypeSQLite
 import taboolib.module.database.Table
 import taboolib.module.database.getHost
@@ -20,12 +19,7 @@ class DatabaseSQLite : Database() {
     val host = newFile(getDataFolder(), "data.db").getHost()
 
     val table = Table(Contribution.CONF.getString("Database.SQLite.table")!!, host) {
-        add {
-            name("user")
-            type(ColumnTypeSQLite.TEXT, 36) {
-                options(ColumnOptionSQLite.PRIMARY_KEY)
-            }
-        }
+        add { id() }
         add {
             name("data")
             type(ColumnTypeSQLite.TEXT)
